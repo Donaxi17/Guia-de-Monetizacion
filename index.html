@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Guía completa para monetizar tu canal de YouTube con Shorts y Videos Largos. Creado con amor por @donaxi-ia">
+    <meta name="keywords" content="YouTube, monetización, shorts, videos largos, partner, donaxi-ia">
+    <title>Guía de Monetización YouTube - Donaxi IA</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-white">
+    <div class="min-h-screen py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Header con amor -->
+            <div class="text-center mb-10 md:mb-16 relative">
+                <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                    <i class="fas fa-heart text-7xl md:text-9xl text-red-500"></i>
+                </div>
+                <div class="relative z-10 px-2">
+                    <div
+                        class="inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-red-500/20 to-pink-500/20 px-4 py-2 md:px-6 md:py-3 rounded-full border border-red-500/30 mb-6">
+                        <i class="fas fa-heart text-red-500 animate-pulse text-sm md:text-base"></i>
+                        <span class="text-xs md:text-sm font-bold text-red-400 uppercase tracking-wider">Creado con amor
+                            para ti</span>
+                        <i class="fas fa-heart text-red-500 animate-pulse text-sm md:text-base"></i>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
+                        Guía de <span class="gradient-text block sm:inline">Monetización</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto px-2">
+                        Esta guía fue creada especialmente desde mi canal
+                        <span class="text-emerald-400 font-bold whitespace-nowrap"> Donaxi </span>
+                        para ayudarte a alcanzar tus metas en YouTube. ¡Espero que te sea útil! 💚
+                    </p>
+
+                    <!-- Botón de Suscripción -->
+                    <div class="flex justify-center mb-8">
+                        <a href="https://www.youtube.com/@donaxi-ia" target="_blank" rel="noopener noreferrer"
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 btn-primary text-white font-bold px-6 py-4 md:px-8 md:py-4 rounded-full text-base md:text-lg pulse-glow transform active:scale-95 transition-transform">
+                            <i class="fab fa-youtube text-2xl"></i>
+                            Suscríbete al Canal
+                            <i class="fas fa-bell"></i>
+                        </a>
+                    </div>
+
+                    <!-- Botones de interacción -->
+                    <div class="flex items-center justify-center gap-3 md:gap-4 flex-wrap px-2">
+                        <button id="likeBtn"
+                            class="social-btn flex-1 sm:flex-none justify-center min-w-[100px] flex items-center gap-2 px-4 py-3 md:px-6 rounded-full font-semibold glass-card text-gray-300 active:scale-95">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span id="likeCount">0</span>
+                        </button>
+
+                        <button id="dislikeBtn"
+                            class="social-btn flex-1 sm:flex-none justify-center min-w-[100px] flex items-center gap-2 px-4 py-3 md:px-6 rounded-full font-semibold glass-card text-gray-300 active:scale-95">
+                            <i class="fas fa-thumbs-down"></i>
+                            <span id="dislikeCount">0</span>
+                        </button>
+
+                        <button id="shareBtn"
+                            class="social-btn w-full sm:w-auto justify-center flex items-center gap-2 px-6 py-3 rounded-full font-semibold glass-card text-gray-300 active:scale-95">
+                            <i class="fas fa-share-alt"></i>
+                            Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Shorts -->
+            <div class="mb-12 md:mb-20">
+                <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-12 border-l-4 border-pink-500">
+                    <div
+                        class="flex flex-col md:flex-row items-center md:items-center gap-4 mb-6 text-center md:text-left">
+                        <div
+                            class="bg-gradient-to-br from-pink-500 to-rose-500 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-black shrink-0 shadow-lg shadow-pink-500/20">
+                            1
+                        </div>
+                        <div class="w-full">
+                            <h2 class="text-2xl md:text-4xl font-black text-white mb-2 md:mb-0">Monetización con Shorts
+                            </h2>
+                            <p class="text-sm md:text-base text-gray-400">Videos de 60 segundos o menos</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Requisitos -->
+                        <div class="bg-black/30 rounded-2xl p-6">
+                            <h3
+                                class="text-xl font-bold mb-6 flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+                                <i class="fas fa-check-circle text-emerald-400 text-2xl md:text-xl"></i>
+                                Requisitos para Monetizar
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4">
+                                <div class="flex flex-col md:flex-row items-center gap-3 text-center md:text-left">
+                                    <div
+                                        class="w-16 h-16 md:w-12 md:h-12 bg-pink-500/20 rounded-2xl md:rounded-xl flex items-center justify-center mb-2 md:mb-0">
+                                        <i class="fas fa-eye text-pink-400 text-3xl md:text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-4xl md:text-2xl text-pink-400">10M</div>
+                                        <div class="text-sm text-gray-400">Vistas en 90 días</div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col md:flex-row items-center gap-3 text-center md:text-left">
+                                    <div
+                                        class="w-16 h-16 md:w-12 md:h-12 bg-pink-500/20 rounded-2xl md:rounded-xl flex items-center justify-center mb-2 md:mb-0">
+                                        <i class="fas fa-users text-pink-400 text-3xl md:text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-4xl md:text-2xl text-pink-400">1,000</div>
+                                        <div class="text-sm text-gray-400">Suscriptores</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tips -->
+                        <div class="bg-black/30 rounded-2xl p-6">
+                            <h3
+                                class="text-xl font-bold mb-6 flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+                                <i class="fas fa-lightbulb text-yellow-400 text-2xl md:text-xl"></i>
+                                Tips para el Éxito
+                            </h3>
+                            <ul class="space-y-8 md:space-y-3">
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-bolt text-pink-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Hook en
+                                            3 segundos:</strong>
+                                        <span class="text-gray-400"> Captura la atención inmediatamente con texto grande
+                                            o una pregunta impactante.</span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-repeat text-pink-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Efecto
+                                            Bucle:</strong>
+                                        <span class="text-gray-400"> Haz que el final conecte con el inicio para que lo
+                                            vean múltiples veces.</span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-calendar-alt text-pink-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Consistencia:</strong>
+                                        <span class="text-gray-400"> Sube mínimo 2-3 shorts diarios para crecer
+                                            rápido.</span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-hashtag text-pink-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Hashtags
+                                            estratégicos:</strong>
+                                        <span class="text-gray-400"> Usa #Shorts + 2-3 hashtags de tu nicho.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Recomendaciones -->
+                        <div
+                            class="bg-gradient-to-br from-pink-500/10 to-rose-500/10 rounded-2xl p-6 border border-pink-500/20">
+                            <h3
+                                class="text-xl font-bold mb-6 flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 text-center md:text-left">
+                                <i class="fas fa-star text-yellow-400 text-2xl md:text-xl"></i>
+                                Recomendaciones Profesionales
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8">
+                                <div>
+                                    <h4
+                                        class="text-emerald-400 font-bold mb-4 flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 text-lg text-center md:text-left">
+                                        <i class="fas fa-check"></i>
+                                        Haz esto:
+                                    </h4>
+                                    <ul class="space-y-4 md:space-y-2 text-gray-300">
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            Formato vertical 9:16
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            Música trending de YouTube
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            Subtítulos grandes y legibles
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            Contenido original y único
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-red-400 font-bold mb-4 flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 text-lg text-center md:text-left">
+                                        <i class="fas fa-times"></i>
+                                        Evita esto:
+                                    </h4>
+                                    <ul class="space-y-4 md:space-y-2 text-gray-300">
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Resubir contenido de otros
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Intros largas (más de 2s)
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Watermarks de otras apps
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Contenido clickbait engañoso
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Videos Largos -->
+            <div class="mb-12 md:mb-20">
+                <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-12 border-l-4 border-purple-500">
+                    <div
+                        class="flex flex-col md:flex-row items-center md:items-center gap-4 mb-6 text-center md:text-left">
+                        <div
+                            class="bg-gradient-to-br from-purple-500 to-indigo-500 w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center text-2xl md:text-3xl font-black shrink-0 shadow-lg shadow-purple-500/20">
+                            2
+                        </div>
+                        <div class="w-full">
+                            <h2 class="text-2xl md:text-4xl font-black text-white mb-2 md:mb-0">Videos Largos (8+
+                                minutos)</h2>
+                            <p class="text-sm md:text-base text-gray-400">La mejor forma de ganar dinero sostenible</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Recomendaciones -->
+                        <div
+                            class="glass-card rounded-2xl p-6 bg-gradient-to-br from-gray-900 to-black border border-gray-800">
+                            <h3
+                                class="text-xl font-bold mb-6 flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 text-center md:text-left">
+                                <i class="fas fa-star text-yellow-400 text-2xl md:text-xl"></i>
+                                Recomendaciones Profesionales
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8">
+                                <div>
+                                    <h4
+                                        class="text-emerald-400 font-bold mb-4 flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 text-lg text-center md:text-left">
+                                        <i class="fas fa-check"></i>
+                                        Haz esto:
+                                    </h4>
+                                    <ul class="space-y-4 md:space-y-2 text-gray-300">
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            Formato horizontal 16:9
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            Miniaturas de Alto Impacto (CTR)
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            SEO: Título y Descripción optimizados
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-emerald-500 mt-1 hidden md:block">•</span>
+                                            Edición dinámica (cambios cada 5-10s)
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-red-400 font-bold mb-4 flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 text-lg text-center md:text-left">
+                                        <i class="fas fa-times"></i>
+                                        Evita esto:
+                                    </h4>
+                                    <ul class="space-y-4 md:space-y-2 text-gray-300">
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Intros largas tipo TV (+5 seg)
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Música con Copyright (Strike)
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Monotonía visual (aburrimiento)
+                                        </li>
+                                        <li
+                                            class="flex flex-col md:flex-row items-center md:items-start gap-2 text-center md:text-left">
+                                            <span class="text-red-500 mt-1 hidden md:block">•</span>
+                                            Sub4Sub (Intercambio de subs)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tips -->
+                        <div class="bg-black/30 rounded-2xl p-6">
+                            <h3
+                                class="text-xl font-bold mb-6 flex flex-col md:flex-row items-center gap-2 text-center md:text-left">
+                                <i class="fas fa-lightbulb text-yellow-400 text-2xl md:text-xl"></i>
+                                Estrategias para Acumular Horas
+                            </h3>
+                            <ul class="space-y-8 md:space-y-3">
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-image text-purple-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Miniatura
+                                            llamativa:</strong>
+                                        <span class="text-gray-400"> Usa colores brillantes, poco texto y rostros con
+                                            expresiones fuertes.</span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-infinity text-purple-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Contenido
+                                            evergreen:</strong>
+                                        <span class="text-gray-400"> Tutoriales y guías que la gente busque siempre (ej:
+                                            "Cómo hacer...", "Tutorial de...").</span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-list text-purple-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Crea
+                                            playlists:</strong>
+                                        <span class="text-gray-400"> Organiza videos por tema para que vean varios
+                                            seguidos (más horas).</span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <i class="fas fa-broadcast-tower text-purple-400 text-2xl md:text-base mt-1"></i>
+                                    <div>
+                                        <strong
+                                            class="text-white block md:inline text-lg md:text-base mb-1 md:mb-0">Transmisiones
+                                            en vivo:</strong>
+                                        <span class="text-gray-400"> Un live de 2 horas con 100 personas = 200 horas de
+                                            reproducción instantáneas.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Recomendaciones -->
+                        <div
+                            class="bg-gradient-to-br from-purple-500/10 to-indigo-500/10 rounded-2xl p-6 border border-purple-500/20">
+                            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                                <i class="fas fa-rocket text-yellow-400"></i>
+                                Acelera tu Crecimiento
+                            </h3>
+                            <div class="space-y-8 md:space-y-4">
+                                <div
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <div
+                                        class="w-12 h-12 md:w-8 md:h-8 bg-emerald-500 rounded-xl md:rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xl md:text-base">
+                                        1</div>
+                                    <div>
+                                        <div class="font-semibold text-white mb-1 text-lg md:text-base">Optimiza el SEO
+                                        </div>
+                                        <div class="text-sm text-gray-400">Título con palabras clave + descripción
+                                            detallada + etiquetas relevantes.</div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <div
+                                        class="w-12 h-12 md:w-8 md:h-8 bg-emerald-500 rounded-xl md:rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xl md:text-base">
+                                        2</div>
+                                    <div>
+                                        <div class="font-semibold text-white mb-1 text-lg md:text-base">Retención es
+                                            clave</div>
+                                        <div class="text-sm text-gray-400">Elimina partes aburridas. Mantén el ritmo
+                                            alto con cortes dinámicos.</div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <div
+                                        class="w-12 h-12 md:w-8 md:h-8 bg-emerald-500 rounded-xl md:rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xl md:text-base">
+                                        3</div>
+                                    <div>
+                                        <div class="font-semibold text-white mb-1 text-lg md:text-base">Publica
+                                            consistentemente</div>
+                                        <div class="text-sm text-gray-400">Mínimo 5 videos por semana. YouTube premia la
+                                            constancia.</div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
+                                    <div
+                                        class="w-12 h-12 md:w-8 md:h-8 bg-emerald-500 rounded-xl md:rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-xl md:text-base">
+                                        4</div>
+                                    <div>
+                                        <div class="font-semibold text-white mb-1 text-lg md:text-base">Interactúa con
+                                            tu audiencia</div>
+                                        <div class="text-sm text-gray-400">Responde comentarios en las primeras horas.
+                                            YouTube lo valora mucho.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Hashtags por Nicho -->
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-12 mb-12 md:mb-20">
+                <h2 class="text-2xl md:text-3xl font-black mb-4 flex items-center justify-center gap-3 text-center">
+                    <i class="fas fa-tags text-yellow-400"></i>
+                    Nichos Virales & Hashtags
+                </h2>
+                <p class="text-gray-400 mb-8 text-center max-w-2xl mx-auto">
+                    Los nichos con más tráfico en Shorts. Copia y mezcla estos hashtags. <br>
+                    <span class="text-xs text-gray-500">(Recuerda siempre: #Shorts va primero)</span>
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Comedia / Entretenimiento (El Rey de Shorts) -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-yellow-500/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-laugh-squint text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Comedia & Viral</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Comedia</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Humor</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Risa</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Viral</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Funny</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Meme</span>
+                        </div>
+                    </div>
+
+                    <!-- Gaming -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-purple-500/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-gamepad text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Gaming</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gaming</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gamer</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Minecraft</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Roblox</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Fortnite</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#PlayStation</span>
+                        </div>
+                    </div>
+
+                    <!-- Curiosidades / Datos -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-red-500/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-brain text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Curiosidades</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Curiosidades</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#SabiasQue</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Datos</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Aprende</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Interesante</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Misterio</span>
+                        </div>
+                    </div>
+
+                    <!-- Lifestyle / Vlogs -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-blue-400/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-camera text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Vlogs & Lifestyle</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Vlog</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Lifestyle</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#DailyRoutine</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Minivlog</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Aesthetic</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#DayInMyLife</span>
+                        </div>
+                    </div>
+
+                    <!-- Fitness / Salud -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-emerald-500/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-dumbbell text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Fitness & Salud</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Fitness</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gym</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Workout</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Ejercicio</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Salud</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Motivation</span>
+                        </div>
+                    </div>
+
+                    <!-- Storytime / Historias -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-pink-500/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-book-open text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Storytime</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Storytime</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Historia</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Chisme</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Drama</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#RealLife</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Confesiones</span>
+                        </div>
+                    </div>
+
+                    <!-- Tecnología & Trucos -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-cyan-500/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-microchip text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Tecnología & Trucos</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Tech</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Trucos</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Hacks</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Android</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#iPhone</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gadgets</span>
+                        </div>
+                    </div>
+
+                    <!-- Cocina & Recetas -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-orange-500/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-utensils text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Cocina & Recetas</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Recetas</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Cocina</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Foodie</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Delicioso</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Chef</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Comida</span>
+                        </div>
+                    </div>
+
+                    <!-- Mascotas (El Clásico) -->
+                    <div
+                        class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-yellow-400/50 transition-colors group text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
+                            <i class="fas fa-paw text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Mascotas</h3>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <span
+                                class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Mascotas</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gatos</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Perros</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Cute</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Animals</span>
+                            <span
+                                class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#FunnyAnimals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Comentarios -->
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-12">
+                <h2 class="text-2xl md:text-3xl font-black mb-6 md:mb-8 flex items-center gap-3">
+                    <i class="fas fa-comments text-emerald-400"></i>
+                    Comentarios
+                </h2>
+
+                <!-- Formulario de comentarios -->
+                <form id="commentForm" class="mb-8 md:mb-12 bg-black/30 rounded-2xl p-4 md:p-6">
+                    <div class="mb-4">
+                        <label class="flex items-center gap-2 mb-2 cursor-pointer select-none">
+                            <input type="checkbox" id="anonymousCheck"
+                                class="w-4 h-4 rounded border-gray-600 text-emerald-500 focus:ring-emerald-500 bg-gray-700" />
+                            <span class="text-sm text-gray-400">Comentar como Anónimo</span>
+                        </label>
+
+                        <input type="text" id="nameInput" placeholder="Tu nombre"
+                            class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors" />
+                    </div>
+
+                    <textarea id="commentText" placeholder="Comparte tu experiencia o pregunta..."
+                        class="w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 mb-4 min-h-[100px] transition-colors"
+                        required></textarea>
+
+                    <div
+                        class="flex flex-col items-center sm:flex-row sm:items-center justify-between gap-6 md:gap-4 mt-6">
+                        <div class="w-full sm:w-auto text-center sm:text-left">
+                            <div class="text-base md:text-sm text-gray-400 mb-2">Califica esta guía:</div>
+                            <div class="star-rating justify-center sm:justify-start flex gap-1" id="starRating">
+                                <i class="fas fa-star text-3xl md:text-3xl star cursor-pointer transition-transform hover:scale-110"
+                                    data-rating="1"></i>
+                                <i class="fas fa-star text-3xl md:text-3xl star cursor-pointer transition-transform hover:scale-110"
+                                    data-rating="2"></i>
+                                <i class="fas fa-star text-3xl md:text-3xl star cursor-pointer transition-transform hover:scale-110"
+                                    data-rating="3"></i>
+                                <i class="fas fa-star text-3xl md:text-3xl star cursor-pointer transition-transform hover:scale-110"
+                                    data-rating="4"></i>
+                                <i class="fas fa-star text-3xl md:text-3xl star cursor-pointer transition-transform hover:scale-110"
+                                    data-rating="5"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full sm:w-auto btn-primary px-8 py-4 md:py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-lg md:text-base active:scale-95 transition-transform shadow-lg shadow-emerald-500/20">
+                            <i class="fas fa-paper-plane"></i>
+                            Publicar Comentario
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Lista de comentarios -->
+                <div id="commentsList" class="space-y-4">
+                    <div class="text-center py-12 text-gray-500">
+                        <i class="fas fa-comment-slash text-5xl mb-4 opacity-50"></i>
+                        <p>Sé el primero en comentar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center mt-16 pt-8 border-t border-gray-800">
+                <p class="text-gray-500 mb-2">
+                    Hecho con <i class="fas fa-heart text-red-500"></i> por
+                    <a href="https://www.youtube.com/@donaxi-ia" target="_blank" rel="noopener noreferrer"
+                        class="text-emerald-400 font-bold hover:underline ml-1">
+                        Donaxi
+                    </a>
+                </p>
+                <p class="text-sm text-gray-600">© 2026 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
