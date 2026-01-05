@@ -1,167 +1,55 @@
-# 🎯 Guía de Monetización YouTube - Donaxi IA
+# 🚀 Guía de Monetización YouTube - Donaxi
 
-Una página web profesional y minimalista creada con **HTML puro + JavaScript vanilla** para ayudar a creadores de contenido a monetizar sus canales de YouTube.
+Una plataforma web interactiva y moderna diseñada para guiar a los creadores de contenido en su camino hacia la monetización en YouTube. Desarrollada con tecnologías web estándar para garantizar rendimiento y compatibilidad.
 
-## ✨ Características
+## ✨ Características Principales
 
-### 💚 Mensaje Personal
-- Introducción creada con amor desde el canal **@donaxi-ia**
-- Diseño emotivo y profesional con animaciones suaves
+### 🎯 Estrategias de Monetización
+- **Shorts:** Guía detallada sobre requisitos (10M vistas), hooks virales y estrategias de retención.
+- **Videos Largos:** Roadmap para alcanzar las 4,000 horas y 1,000 suscriptores con contenido evergreen.
+- **Hashtags Virales:** Colección curada de hashtags por nicho (Gaming, Vlogs, Cocina, Tech, etc.).
 
-### 📊 Secciones Educativas
+### 🛠 Herramientas Interactivas
+- **Calculadora de Ingresos:** Estimaciones basadas en RPM por nicho.
+- **Checklists Profesionales:** Listas de "Qué hacer" y "Qué evitar".
+- **Sistema de Comentarios:** Persistencia local para feedback de usuarios.
 
-#### 1️⃣ Monetización con Shorts
-- **Requisitos claros**: 10M vistas en 90 días + 1,000 suscriptores
-- **Tips profesionales**:
-  - Hook en 3 segundos
-  - Efecto bucle
-  - Consistencia en publicaciones
-  - Hashtags estratégicos
-- **Recomendaciones**: Qué hacer y qué evitar
+## 💻 Stack Tecnológico
 
-#### 2️⃣ Videos Largos (8+ minutos)
-- **Requisitos**: 4,000 horas + 1,000 suscriptores
-- **Estrategias**:
-  - Miniaturas llamativas
-  - Contenido evergreen
-  - Creación de playlists
-  - Transmisiones en vivo
-- **Aceleradores de crecimiento**: SEO, retención, consistencia, interacción
+El proyecto está construido con un enfoque minimalista y performante:
 
-### 🎮 Interactividad
+- **HTML5 Semántico:** Estructura limpia y accesible.
+- **Tailwind CSS (CDN):** Diseño responsivo, modos oscuros y efectos de vidrio (Glassmorphism).
+- **JavaScript (Vanilla):** Lógica de negocio ligera sin dependencias de frameworks pesados.
+- **Google Fonts & Font Awesome:** Tipografía Inter e iconos vectoriales.
 
-#### Botones Sociales
-- 🔔 **Suscripción**: Enlace directo al canal @donaxi-ia
-- 👍 **Me gusta/No me gusta**: Sistema de votación persistente
-- 🔗 **Compartir**: Comparte la página fácilmente
+## 🚀 Instalación y Despliegue
 
-#### Sistema de Comentarios
-- 💬 Comentarios públicos o anónimos
-- ⭐ Sistema de calificación con estrellas (1-5)
-- 🏆 Ordenamiento automático por mejor puntuación
-- 💾 Persistencia de datos con localStorage
-- ✨ Diseño de tarjetas animadas
+Este proyecto es estático, lo que facilita su despliegue en cualquier servicio de hosting gratuito.
 
-## 🎨 Diseño
+### Opción 1: Ejecutar Localmente
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Donaxi17/Guia-de-Monetizacion.git
+   ```
+2. Abre el archivo `index.html` en tu navegador favorito.
+   ¡Listo! No requiere instalación de dependencias ni servidores de compilación.
 
-- ✅ **HTML puro + JavaScript vanilla** (sin frameworks)
-- 🎨 **Tailwind CSS** para estilos responsivos
-- 🎭 **Font Awesome 6.5** para iconos profesionales
-- 🔤 **Google Fonts (Inter)** para tipografía premium
-- 🌈 **Efectos glassmorphism** y gradientes modernos
-- 🎬 **Animaciones suaves** y micro-interacciones
-- 📱 **100% Responsive** (móvil, tablet, desktop)
+### Opción 2: Despliegue en Vercel
+1. Instala Vercel CLI: `npm i -g vercel`
+2. Ejecuta el comando `vercel` en la raíz del proyecto.
+3. Sigue las instrucciones en pantalla.
 
-## 🚀 Desplegar en Vercel
+## � Personalización
 
-### Opción 1: Desde la terminal (Recomendado)
+El código está organizado para ser fácilmente editable:
+- `index.html`: Contiene toda la estructura y textos.
+- `style.css` (o clases Tailwind): Maneja la apariencia visual.
+- `script.js`: Controla la interactividad (calculadora, comentarios).
 
-```bash
-# 1. Navega a la carpeta
-cd monetization-page
+## 📄 Licencia
 
-# 2. Instala Vercel CLI (si no lo tienes)
-npm i -g vercel
-
-# 3. Despliega
-vercel
-
-# 4. Sigue las instrucciones:
-# - Set up and deploy? Yes
-# - Which scope? (tu cuenta)
-# - Link to existing project? No
-# - Project name? monetizacion-youtube (o el que prefieras)
-# - In which directory is your code located? ./
-# - Want to override settings? No
-
-# 5. ¡Listo! Vercel te dará una URL
-```
-
-### Opción 2: Desde la web de Vercel
-
-1. Ve a [vercel.com](https://vercel.com)
-2. Haz clic en "Add New..." → "Project"
-3. Importa tu repositorio de Git o arrastra la carpeta `monetization-page`
-4. Vercel detectará automáticamente que es un sitio estático
-5. Haz clic en "Deploy"
-6. ¡Listo! Tu sitio estará en línea
-
-### Opción 3: Arrastrar y soltar
-
-1. Ve a [vercel.com/new](https://vercel.com/new)
-2. Arrastra la carpeta `monetization-page` completa
-3. Vercel la subirá y desplegará automáticamente
-
-## 📁 Estructura de Archivos
-
-```
-monetization-page/
-├── index.html      # Página principal con todo el HTML
-├── script.js       # JavaScript vanilla con toda la lógica
-├── vercel.json     # Configuración de Vercel
-└── README.md       # Esta documentación
-```
-
-## 🔧 Tecnologías
-
-- **HTML5** - Estructura semántica
-- **JavaScript ES6+** - Lógica vanilla (sin frameworks)
-- **Tailwind CSS 3** (CDN) - Estilos modernos
-- **Font Awesome 6.5** (CDN) - Iconos
-- **Google Fonts** (CDN) - Tipografía Inter
-- **LocalStorage API** - Persistencia de datos
-
-## 💾 Datos Persistentes
-
-La página guarda automáticamente en el navegador:
-- ✅ Comentarios de usuarios
-- ✅ Likes y dislikes
-- ✅ Tu voto personal
-
-Todo se almacena en `localStorage`, por lo que los datos persisten entre sesiones.
-
-## 🎯 Personalización
-
-Para personalizar el contenido, edita los archivos:
-
-### `index.html`
-- **Canal de YouTube**: Busca `https://www.youtube.com/@donaxi-ia` y reemplaza
-- **Colores**: Modifica las clases de Tailwind CSS
-- **Contenido**: Actualiza los textos en español
-
-### `script.js`
-- **Funcionalidades**: Añade o modifica comportamientos
-- **Validaciones**: Personaliza las validaciones del formulario
-
-## 📱 Compatibilidad
-
-- ✅ Chrome/Edge (recomendado)
-- ✅ Firefox
-- ✅ Safari
-- ✅ Opera
-- ✅ Móviles (iOS/Android)
-
-## 🌟 Características Destacadas
-
-1. **Sistema de votación inteligente**: Solo puedes votar una vez
-2. **Comentarios ordenados**: Los mejores comentarios (más estrellas) aparecen primero
-3. **Modo anónimo**: Comenta sin revelar tu identidad
-4. **Compartir nativo**: Usa la API de compartir del navegador
-5. **Diseño premium**: Efectos de glassmorphism y gradientes modernos
-6. **Sin dependencias**: Todo funciona sin necesidad de npm o build
-
-## 🚀 Ventajas de HTML Puro
-
-- ⚡ **Carga ultra-rápida**: Sin frameworks pesados
-- 📦 **Sin build**: No necesitas compilar nada
-- 🔧 **Fácil de editar**: Abre y modifica directamente
-- 🌐 **Funciona en cualquier servidor**: Solo archivos estáticos
-- 💰 **Hosting gratuito**: Vercel, Netlify, GitHub Pages
-
-## 📞 Soporte
-
-Creado con ❤️ por [@donaxi-ia](https://www.youtube.com/@donaxi-ia)
+Este proyecto es de código abierto. Siéntete libre de usarlo y modificarlo para tus propias guías o proyectos educativos.
 
 ---
-
-**¡Disfruta ayudando a tu comunidad a crecer en YouTube! 🚀**
+Creado con ❤️ por **Donaxi**.
