@@ -5,14 +5,14 @@ Una plataforma web interactiva y moderna diseñada para guiar a los creadores de
 ## ✨ Características Principales
 
 ### 🎯 Estrategias de Monetización
-- **Shorts:** Guía detallada sobre requisitos (10M vistas), hooks virales y estrategias de retención.
-- **Videos Largos:** Roadmap para alcanzar las 4,000 horas y 1,000 suscriptores con contenido evergreen.
-- **Hashtags Virales:** Colección curada de hashtags por nicho (Gaming, Vlogs, Cocina, Tech, etc.).
+- **Shorts:** Guía detallada con **Checklist Viral** y Hacks de Retención. Incluye calculadora al final.
+- **Videos Largos:** Roadmap estratégico con **Consejos de Oro** y Checklist de Publicación. Incluye calculadora de rentabilidad.
+- **Nichos Rentables:** Hashtags optimizados por categoría para maximizar alcance.
 
 ### 🛠 Herramientas Interactivas
-- **Calculadora de Ingresos:** Estimaciones basadas en RPM por nicho.
-- **Checklists Profesionales:** Listas de "Qué hacer" y "Qué evitar".
-- **Sistema de Comentarios:** Persistencia local para feedback de usuarios.
+- **Checklists Profesionales:** Listas de verificación paso a paso antes de publicar.
+- **Super Calculadoras de Apoyo:** Herramientas al final de cada sección para proyectar tiempos e ingresos ($).
+- **Diseño Responsive:** Adaptable a cualquier dispositivo.
 
 ## 💻 Stack Tecnológico
 
