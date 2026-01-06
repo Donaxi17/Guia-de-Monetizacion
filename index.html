@@ -244,9 +244,9 @@
             width: 100%;
             margin-left: auto;
             margin-right: auto;
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            max-width: 100vw;
+            padding-left: 6%;
+            padding-right: 6%;
+            max-width: 100%;
             overflow-x: hidden;
         }
 
@@ -267,8 +267,8 @@
 
         @media (max-width: 480px) {
             .page-container {
-                padding-left: 0.75rem !important;
-                padding-right: 0.75rem !important;
+                padding-left: 8% !important;
+                padding-right: 8% !important;
             }
 
             h1 {
@@ -340,10 +340,9 @@
 <body class="bg-gray-900 text-white min-h-screen overflow-x-hidden">
 
     <!-- CONTENEDOR MAESTRO ANTI-SCROLL -->
-    <div class="relative w-full max-w-7xl mx-auto space-y-8 px-4 md:px-8 animate-fade-in-up"
-        style="animation-delay: 0.1s;">
+    <div class="relative w-full max-w-7xl mx-auto space-y-8 md:px-8 animate-fade-in-up" style="animation-delay: 0.1s;">
 
-        <main class="page-container py-8 md:pt-20 md:pb-0 text-center w-full max-w-full overflow-hidden px-2">
+        <main class="page-container py-8 md:pt-20 md:pb-0 text-center w-full max-w-full overflow-hidden">
 
             <!-- Header con amor -->
             <div class="text-center mb-10 md:mb-16 relative">
@@ -360,7 +359,7 @@
                         <i class="fas fa-heart text-red-500 animate-pulse text-[10px]"></i>
                     </div>
 
-                    <h1 class="text-xl sm:text-6xl md:text-8xl font-black mb-6 leading-tight break-words px-2">
+                    <h1 class="text-3xl sm:text-6xl md:text-8xl font-black mb-6 leading-tight px-2">
                         Guía de <br class="sm:hidden"> <span class="gradient-text">Monetización</span>
                     </h1>
 
@@ -373,7 +372,7 @@
                     <div class="flex justify-center mb-8 px-4">
                         <a href="https://www.youtube.com/@donaxi-ia" target="_blank" rel="noopener noreferrer"
                             aria-label="Suscríbete al canal de YouTube de Donaxi"
-                            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 btn-primary text-white font-bold px-6 py-4 md:px-8 md:py-4 rounded-full text-base md:text-xl pulse-glow transform active:scale-95 transition-all shadow-xl shadow-emerald-500/20">
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 btn-primary text-white font-bold px-4 py-4 md:px-8 md:py-4 rounded-full text-base md:text-xl pulse-glow transform active:scale-95 transition-all shadow-xl shadow-emerald-500/20 whitespace-nowrap">
                             <i class="fab fa-youtube text-xl md:text-2xl"></i>
                             Suscríbete al Canal
                         </a>
@@ -387,7 +386,7 @@
                                 <button id="likeBtn" aria-label="Me gusta"
                                     class="social-btn flex-1 md:flex-none min-w-[100px] justify-center flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold glass-card text-gray-200 active:scale-95 text-base md:text-xl transition-all hover:bg-white/10 hover:scale-105 border border-white/5">
                                     <i class="fas fa-thumbs-up text-xl md:text-2xl"></i>
-                                    <span id="likeCount">0</span>
+                                    <span id="likeCount">20</span>
                                 </button>
 
                                 <button id="dislikeBtn" aria-label="No me gusta"
@@ -409,15 +408,15 @@
             </div>
 
             <!-- NAVEGACIÓN PRINCIPAL -->
-            <div class="flex justify-center mb-16 md:mb-24 px-1 sticky top-6 z-50 w-full max-w-full">
+            <div class="flex justify-center mb-16 md:mb-24 px-4 sticky top-6 z-50 w-full max-w-full">
                 <div
-                    class="glass-card p-1 rounded-full inline-flex gap-1 bg-black/80 shadow-2xl backdrop-blur-xl border border-white/10 max-w-[95vw] overflow-hidden">
+                    class="glass-card p-1 rounded-full inline-flex gap-1 bg-black/80 shadow-2xl backdrop-blur-xl border border-white/10 max-w-[95vw]">
                     <button onclick="switchMainTab('shorts')" id="navShorts"
-                        class="px-4 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base tracking-tight md:tracking-widest transition-all duration-500 flex items-center gap-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-xl shadow-pink-500/20 transform scale-105 active:scale-95 whitespace-nowrap">
+                        class="px-6 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base tracking-tight md:tracking-widest transition-all duration-500 flex items-center gap-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-xl shadow-pink-500/20 active:scale-95 whitespace-nowrap">
                         <i class="fas fa-bolt"></i> SHORTS
                     </button>
                     <button onclick="switchMainTab('long')" id="navLong"
-                        class="px-4 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base tracking-tight md:tracking-widest transition-all duration-500 flex items-center gap-2 text-gray-400 hover:text-white hover:bg-white/5 active:scale-95 whitespace-nowrap">
+                        class="px-6 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base tracking-tight md:tracking-widest transition-all duration-500 flex items-center gap-2 text-gray-400 hover:text-white hover:bg-white/5 active:scale-95 whitespace-nowrap">
                         <i class="fas fa-play"></i> LARGOS
                     </button>
                 </div>
@@ -500,7 +499,7 @@
                                 Checklist de Éxito
                             </h3>
 
-                            <ul class="space-y-3 relative z-10">
+                            <ul class="space-y-4 relative z-10">
                                 <li class="group/item flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-pink-500/30 transition-all cursor-pointer"
                                     data-active-color="pink">
                                     <div
@@ -606,20 +605,20 @@
 
                     <!-- Calculadora Shorts (Premium Dark) -->
                     <div
-                        class="bg-[#111] rounded-3xl p-5 md:p-6 border border-gray-800 shadow-2xl relative overflow-hidden">
+                        class="bg-[#111] rounded-3xl p-5 md:p-12 border border-gray-800 shadow-2xl relative overflow-hidden">
                         <!-- Glow -->
                         <div
                             class="absolute -top-40 -left-20 w-80 h-80 bg-pink-600/10 blur-[100px] rounded-full pointer-events-none">
                         </div>
-                        <div class="mb-8 flex items-center gap-6">
+                        <div class="mb-8 flex items-center gap-4">
                             <div
-                                class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-pink-500/20 border border-pink-400/30 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                                class="w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-black text-xl md:text-2xl shadow-xl shadow-pink-500/20 border border-pink-400/30 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                                 1</div>
-                            <h3 class="text-2xl font-bold">Planificador de Viralidad</h3>
+                            <h3 class="text-lg md:text-2xl font-bold">Planificador de Viralidad</h3>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-                            <div class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10">
+                            <div class="space-y-10 md:space-y-8">
                                 <!-- Nav Toggle: New vs Existing -->
                                 <div class="flex bg-gray-800/50 p-1 rounded-xl mb-6">
                                     <button onclick="setSCreatorType('new')" id="btnSNew"
@@ -649,12 +648,13 @@
                                 <!-- Input Vistas -->
                                 <div>
                                     <div class="flex justify-between items-center mb-2">
-                                        <span class="text-pink-400 font-bold text-xs uppercase">Paso 1: Impacto</span>
+                                        <span class="text-pink-400 font-bold text-[10px] md:text-xs uppercase">Paso 1:
+                                            Impacto</span>
                                         <div
-                                            class="flex items-center gap-1 bg-gray-800/50 px-3 py-1 rounded-lg border border-white/5">
+                                            class="flex items-center gap-1 bg-gray-800/50 px-2 py-1 rounded-lg border border-white/5">
                                             <input type="text" id="sTargetDisplay" value="1,000"
-                                                class="bg-transparent text-right font-bold text-lg outline-none w-28 text-white">
-                                            <span class="text-gray-500 font-bold text-sm">vistas</span>
+                                                class="bg-transparent text-right font-bold text-sm md:text-lg outline-none w-20 md:w-28 text-white">
+                                            <span class="text-gray-500 font-bold text-[10px] md:text-sm">vistas</span>
                                         </div>
                                     </div>
                                     <label class="block text-sm text-gray-400 mb-3">¿Cuántas vistas estimas por
@@ -667,24 +667,24 @@
                                 <!-- Input Frecuencia -->
                                 <div>
                                     <div class="flex justify-between items-center mb-2">
-                                        <span class="text-pink-400 font-bold text-xs uppercase">Paso 2:
+                                        <span class="text-pink-400 font-bold text-[10px] md:text-xs uppercase">Paso 2:
                                             Constancia</span>
                                         <div
-                                            class="flex items-center gap-1 bg-gray-800/50 px-3 py-1 rounded-lg border border-white/5">
+                                            class="flex items-center gap-1 bg-gray-800/50 px-2 py-1 rounded-lg border border-white/5">
                                             <input type="number" id="sFreqDisplay" value="1"
-                                                class="bg-transparent text-right font-bold text-lg outline-none w-12 text-white">
-                                            <span class="text-gray-500 font-bold text-sm"
+                                                class="bg-transparent text-right font-bold text-sm md:text-lg outline-none w-10 md:w-12 text-white">
+                                            <span class="text-gray-500 font-bold text-[10px] md:text-sm"
                                                 id="sFreqDisplaySuffix">vid/día</span>
                                         </div>
                                     </div>
                                     <label class="block text-sm text-gray-400 mb-3">¿Cada cuánto publicarás?</label>
-                                    <div class="flex gap-2 mb-4">
+                                    <div class="flex gap-1 mb-4">
                                         <button onclick="setSFreqUnit('day')" id="btnSDay"
-                                            class="flex-1 py-2 rounded-lg bg-pink-500 text-white text-xs font-bold transition-colors">DIARIO</button>
+                                            class="flex-1 py-2 rounded-lg bg-pink-500 text-white text-[10px] md:text-xs font-bold transition-colors">DIARIO</button>
                                         <button onclick="setSFreqUnit('week')" id="btnSWeek"
-                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-xs font-bold transition-colors hover:bg-gray-700">SEMANAL</button>
+                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-[10px] md:text-xs font-bold transition-colors hover:bg-gray-700">SEMANAL</button>
                                         <button onclick="setSFreqUnit('month')" id="btnSMonth"
-                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-xs font-bold transition-colors hover:bg-gray-700">MENSUAL</button>
+                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-[10px] md:text-xs font-bold transition-colors hover:bg-gray-700">MENSUAL</button>
                                     </div>
                                     <input type="range" id="sFreqRange" min="1" max="50" value="1"
                                         class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-pink-500">
@@ -787,12 +787,14 @@
                                             <p class="text-[10px] text-gray-600">(Para alcanzar 10M vistas)</p>
                                         </div>
 
-                                        <p class="text-xs text-gray-500 mb-2 uppercase tracking-widest">Tiempo Estimado
+                                        <p class="text-[10px] text-gray-500 mb-1 uppercase tracking-widest">Tiempo
+                                            Estimado
                                         </p>
-                                        <div class="text-4xl md:text-6xl font-black text-white mb-2 leading-none"
+                                        <div class="text-3xl md:text-6xl font-black text-white mb-1 leading-none"
                                             id="sDaysResult">
                                             334</div>
-                                        <div class="text-xl text-gray-500 font-bold mb-4" id="sDaysLabel">DÍAS</div>
+                                        <div class="text-base md:text-xl text-gray-500 font-bold mb-4" id="sDaysLabel">
+                                            DÍAS</div>
 
                                         <!-- Alerta 90 Días -->
                                         <div id="s90DayAlert"
@@ -886,7 +888,8 @@
                                     </div>
 
                                     <div class="mb-6 text-left">
-                                        <div class="flex justify-between items-center mb-2">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-3">
                                             <span
                                                 class="text-[10px] text-gray-500 uppercase font-bold tracking-widest flex items-center gap-1">RPM
                                                 Manual ($ / 1k vistas)
@@ -894,11 +897,11 @@
                                                     title="Ingresos aproximados por cada 1,000 reproducciones monetizadas. El RPM de Shorts suele ser mucho más bajo que el de videos largos."></i>
                                             </span>
                                             <div
-                                                class="flex items-center gap-1 bg-black/40 px-3 py-1.5 rounded-xl border border-white/10 focus-within:border-emerald-500/50 transition-colors">
+                                                class="flex items-center gap-1 bg-black/40 px-3 py-2 sm:py-1.5 rounded-xl border border-white/10 focus-within:border-emerald-500/50 transition-colors w-full sm:w-auto">
                                                 <span class="text-emerald-500 font-black text-sm">$</span>
                                                 <input type="number" id="sRpmInput" value="0.03" step="0.01" min="0.01"
                                                     max="1.00"
-                                                    class="bg-transparent text-right font-black text-base outline-none w-20 text-white">
+                                                    class="bg-transparent text-right font-black text-base outline-none flex-1 sm:w-20 text-white">
                                             </div>
                                         </div>
                                         <input type="range" id="sRpmRange" min="0.01" max="0.20" step="0.01"
@@ -909,7 +912,7 @@
                                     <div class="space-y-4 border-t border-gray-800 pt-6 text-center">
                                         <!-- Modo A: Vistas -> Dinero -->
                                         <div
-                                            class="bg-black/30 p-6 rounded-[2rem] border border-white/5 hover:border-emerald-500/30 transition-all group flex flex-col items-center justify-center">
+                                            class="bg-black/30 p-4 md:p-6 rounded-[2rem] border border-white/5 hover:border-emerald-500/30 transition-all group flex flex-col items-center justify-center">
                                             <div
                                                 class="flex items-center justify-center gap-2 mb-4 text-[10px] text-gray-500 uppercase font-bold tracking-[0.2em]">
                                                 <span>Si obtengo estas vistas:</span>
@@ -920,12 +923,12 @@
                                             <div class="w-full max-w-xs mb-4">
                                                 <input type="text" id="sManualViews" value="1,000,000"
                                                     oninput="formatInputThousands(this); calcMoneyFromManualViews();"
-                                                    class="w-full bg-transparent text-white font-black text-4xl text-center outline-none placeholder:text-gray-800 border-b border-white/5 focus:border-emerald-500/50 pb-2 transition-colors">
+                                                    class="w-full bg-transparent text-white font-black text-2xl md:text-4xl text-center outline-none placeholder:text-gray-800 border-b border-white/5 focus:border-emerald-500/50 pb-2 transition-colors">
                                             </div>
 
                                             <div class="flex flex-col items-center">
                                                 <div id="sMoneyFromManual"
-                                                    class="text-emerald-400 font-black text-5xl leading-none mb-2">
+                                                    class="text-emerald-400 font-black text-2xl md:text-5xl leading-none mb-2">
                                                     $0.00</div>
                                                 <div
                                                     class="text-[10px] text-gray-400 uppercase font-bold opacity-60 tracking-widest">
@@ -935,7 +938,7 @@
 
                                         <!-- Modo B: Dinero -> Vistas -->
                                         <div
-                                            class="bg-black/30 p-6 rounded-[2rem] border border-white/5 hover:border-emerald-500/30 transition-all group flex flex-col items-center justify-center">
+                                            class="bg-black/30 p-4 md:p-6 rounded-[2rem] border border-white/5 hover:border-emerald-500/30 transition-all group flex flex-col items-center justify-center">
                                             <div
                                                 class="flex items-center justify-center gap-2 mb-4 text-[10px] text-gray-500 uppercase font-bold tracking-[0.2em]">
                                                 <span>Si mi meta de dinero es:</span>
@@ -945,15 +948,16 @@
 
                                             <div
                                                 class="flex items-center justify-center border-b border-white/5 focus-within:border-emerald-500/50 pb-2 mb-4 w-full max-w-xs transition-colors">
-                                                <span class="text-emerald-400 font-black text-4xl mr-2">$</span>
+                                                <span
+                                                    class="text-emerald-400 font-black text-2xl md:text-4xl mr-2">$</span>
                                                 <input type="text" id="sTargetIncome" value="500"
                                                     oninput="formatInputThousands(this); calcViewsFromTargetIncome();"
-                                                    class="bg-transparent text-emerald-400 font-black text-4xl text-center outline-none placeholder:text-gray-800 w-40">
+                                                    class="bg-transparent text-emerald-400 font-black text-2xl md:text-4xl text-center outline-none placeholder:text-gray-800 w-32 md:w-40">
                                             </div>
 
                                             <div class="flex flex-col items-center">
                                                 <div id="sViewsFromIncome"
-                                                    class="text-white font-black text-5xl leading-none mb-2 tracking-tighter">
+                                                    class="text-white font-black text-2xl md:text-5xl leading-none mb-2 tracking-tighter">
                                                     0</div>
                                                 <div
                                                     class="text-[10px] text-gray-400 uppercase font-bold opacity-60 tracking-widest">
@@ -1001,7 +1005,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="space-y-3">
+                                    <div class="space-y-4">
                                         <div class="flex items-center gap-3 text-gray-300 bg-black/20 p-3 rounded-xl">
                                             <i class="fas fa-image text-purple-400 text-xl w-6 text-center"></i>
                                             <span><strong>Miniatura (CTR):</strong> Colores brillantes, rostros, poco
@@ -1046,7 +1050,7 @@
                                 Checklist de Publicación
                             </h3>
 
-                            <ul class="space-y-3 relative z-10">
+                            <ul class="space-y-4 relative z-10">
                                 <li class="group/item flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-purple-500/30 transition-all cursor-pointer"
                                     data-active-color="purple">
                                     <div
@@ -1128,17 +1132,21 @@
                         </div>
                     </div>
 
-                    <!-- Calculadora Largos (Rediseñada - Compacta) -->
+                    <!-- Calculadora Largos -->
                     <div
-                        class="glass-card rounded-3xl p-5 md:p-6 border border-gray-700 bg-gradient-to-br from-gray-900 via-gray-900 to-black">
-                        <div class="mb-8 flex items-center gap-6">
-                            <div
-                                class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-purple-500/20 border border-purple-400/30 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                                2</div>
-                            <h3 class="text-2xl font-bold">Calculadora de Horas (Partner)</h3>
+                        class="bg-[#111] rounded-3xl p-5 md:p-12 border border-gray-800 shadow-2xl relative overflow-hidden">
+                        <!-- Glow -->
+                        <div
+                            class="absolute -top-40 -left-20 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full pointer-events-none">
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-                            <div class="space-y-5">
+                        <div class="mb-8 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-black text-xl md:text-2xl shadow-xl shadow-purple-500/20 border border-purple-400/30 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                                2</div>
+                            <h3 class="text-lg md:text-2xl font-bold">Calculadora de Horas (Partner)</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10">
+                            <div class="space-y-10 md:space-y-8">
                                 <!-- Nav Toggle: New vs Existing -->
                                 <div class="flex bg-gray-800/50 p-1 rounded-xl mb-6">
                                     <button onclick="setLCreatorType('new')" id="btnLNew"
@@ -1168,14 +1176,14 @@
                                 <!-- Input Vistas -->
                                 <div>
                                     <div class="flex justify-between items-center mb-2">
-                                        <span class="text-indigo-400 font-bold text-xs uppercase">Paso 1:
+                                        <span class="text-indigo-400 font-bold text-[10px] md:text-xs uppercase">Paso 1:
                                             Tráfico</span>
                                         <div
-                                            class="flex items-center gap-1 bg-gray-800/50 px-3 py-1 rounded-lg border border-white/5">
+                                            class="flex items-center gap-1 bg-gray-800/50 px-2 py-1 rounded-lg border border-white/5">
                                             <input type="text" id="lTargetDisplay" value="1,000"
                                                 oninput="formatInputThousands(this); document.getElementById('lTargetRange').value = this.value.replace(/\D/g,''); updateLongCalc();"
-                                                class="bg-transparent text-right font-bold text-lg outline-none w-24 text-white">
-                                            <span class="text-gray-500 font-bold text-sm">vistas</span>
+                                                class="bg-transparent text-right font-bold text-sm md:text-lg outline-none w-20 md:w-24 text-white">
+                                            <span class="text-gray-500 font-bold text-[10px] md:text-sm">vistas</span>
                                         </div>
                                     </div>
                                     <label class="block text-sm text-gray-400 mb-3">Vistas promedio por
@@ -1185,22 +1193,22 @@
                                 </div>
 
                                 <!-- Inputs Técnicos -->
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="bg-black/20 p-4 rounded-2xl border border-white/5">
+                                <div class="grid grid-cols-2 gap-3 md:gap-4">
+                                    <div class="bg-black/20 p-3 md:p-4 rounded-2xl border border-white/5 text-center">
                                         <label
-                                            class="block text-[10px] text-indigo-400 font-bold uppercase mb-2">Duración
-                                            (min)</label>
+                                            class="block text-[9px] md:text-[10px] text-indigo-400 font-bold uppercase mb-2">Duración
+                                            (MIN)</label>
                                         <input type="number" id="lDurationInput" value="10" min="1" max="180"
-                                            class="w-full bg-transparent text-white text-2xl font-black focus:text-indigo-400 outline-none transition-colors">
+                                            class="w-full bg-transparent text-white text-xl md:text-2xl font-black focus:text-indigo-400 outline-none transition-colors text-center">
                                     </div>
-                                    <div class="bg-black/20 p-4 rounded-2xl border border-white/5">
+                                    <div class="bg-black/20 p-3 md:p-4 rounded-2xl border border-white/5 text-center">
                                         <label
-                                            class="block text-[10px] text-indigo-400 font-bold uppercase mb-2">Retención
+                                            class="block text-[9px] md:text-[10px] text-indigo-400 font-bold uppercase mb-2">Retención
                                             (%)</label>
-                                        <div class="flex items-center">
+                                        <div class="flex items-center justify-center">
                                             <input type="number" id="lRetentionInput" value="40" min="1" max="100"
-                                                class="w-full bg-transparent text-white text-2xl font-black focus:text-indigo-400 outline-none transition-colors">
-                                            <span class="text-gray-500 font-bold text-xl">%</span>
+                                                class="w-[60%] bg-transparent text-white text-xl md:text-2xl font-black focus:text-indigo-400 outline-none transition-colors text-center">
+                                            <span class="text-gray-500 font-bold text-lg md:text-xl">%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1208,24 +1216,24 @@
                                 <!-- Input Frecuencia -->
                                 <div>
                                     <div class="flex justify-between items-center mb-2">
-                                        <span class="text-indigo-400 font-bold text-xs uppercase">Paso 2:
+                                        <span class="text-indigo-400 font-bold text-[10px] md:text-xs uppercase">Paso 2:
                                             Producción</span>
                                         <div
-                                            class="flex items-center gap-1 bg-gray-800/50 px-3 py-1 rounded-lg border border-white/5">
+                                            class="flex items-center gap-1 bg-gray-800/50 px-2 py-1 rounded-lg border border-white/5">
                                             <input type="number" id="lFreqDisplay" value="1"
-                                                class="bg-transparent text-right font-bold text-lg outline-none w-12 text-white">
-                                            <span class="text-gray-500 font-bold text-sm"
+                                                class="bg-transparent text-right font-bold text-sm md:text-lg outline-none w-10 md:w-12 text-white">
+                                            <span class="text-gray-500 font-bold text-[10px] md:text-sm"
                                                 id="lFreqDisplaySuffix">vid/sem</span>
                                         </div>
                                     </div>
                                     <label class="block text-sm text-gray-400 mb-3">¿Cada cuánto publicarás?</label>
-                                    <div class="flex gap-2 mb-4">
+                                    <div class="flex gap-1 mb-4">
                                         <button onclick="setLFreqUnit('day')" id="btnLDay"
-                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-xs font-bold transition-colors hover:bg-gray-700">DIARIO</button>
+                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-[10px] md:text-xs font-bold transition-colors hover:bg-gray-700">DIARIO</button>
                                         <button onclick="setLFreqUnit('week')" id="btnLWeek"
-                                            class="flex-1 py-2 rounded-lg bg-indigo-500 text-white text-xs font-bold transition-colors shadow-lg shadow-indigo-500/30">SEMANAL</button>
+                                            class="flex-1 py-2 rounded-lg bg-indigo-500 text-white text-[10px] md:text-xs font-bold transition-colors shadow-lg shadow-indigo-500/30">SEMANAL</button>
                                         <button onclick="setLFreqUnit('month')" id="btnLMonth"
-                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-xs font-bold transition-colors hover:bg-gray-700">MENSUAL</button>
+                                            class="flex-1 py-2 rounded-lg bg-gray-800 text-gray-400 text-[10px] md:text-xs font-bold transition-colors hover:bg-gray-700">MENSUAL</button>
                                     </div>
                                     <input type="range" id="lFreqRange" min="1" max="50" value="1"
                                         class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-indigo-500">
@@ -1440,7 +1448,8 @@
                                     </div>
 
                                     <div class="mb-8 text-left">
-                                        <div class="flex justify-between items-center mb-3">
+                                        <div
+                                            class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-4">
                                             <span
                                                 class="text-[9px] text-gray-500 uppercase font-black tracking-widest flex items-center gap-1">RPM
                                                 Manual ($ / 1k vistas)
@@ -1448,11 +1457,11 @@
                                                     title="Ingresos aproximados por cada 1,000 reproducciones monetizadas."></i>
                                             </span>
                                             <div
-                                                class="flex items-center gap-1 bg-black/60 px-4 py-2 rounded-2xl border border-white/10 focus-within:border-indigo-500/50 transition-all">
+                                                class="flex items-center gap-1 bg-black/60 px-4 py-3 sm:py-2 rounded-2xl border border-white/10 focus-within:border-indigo-500/50 transition-all w-full sm:w-auto">
                                                 <span class="text-indigo-400 font-black text-sm">$</span>
                                                 <input type="number" id="lRpmInput" value="4.00" step="0.50" min="0.10"
                                                     max="100"
-                                                    class="bg-transparent text-right font-black text-lg outline-none w-24 text-white">
+                                                    class="bg-transparent text-right font-black text-lg outline-none flex-1 sm:w-24 text-white">
                                             </div>
                                         </div>
                                         <input type="range" id="lRpmRange" min="0.5" max="20" step="0.5" value="4"
@@ -1462,7 +1471,7 @@
                                     <div class="space-y-4 border-t border-white/10 pt-8 text-center">
                                         <!-- Modo A: Vistas -> Dinero -->
                                         <div
-                                            class="bg-black/40 p-6 rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all group flex flex-col items-center justify-center">
+                                            class="bg-black/40 p-4 md:p-6 rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all group flex flex-col items-center justify-center">
                                             <div
                                                 class="flex items-center justify-center gap-2 mb-4 text-[9px] text-gray-500 uppercase font-bold tracking-[0.2em]">
                                                 <span>Si obtengo estas vistas:</span>
@@ -1473,12 +1482,12 @@
                                             <div class="w-full max-w-xs mb-4">
                                                 <input type="text" id="lManualViews" value="1,000"
                                                     oninput="formatInputThousands(this); calcMoneyFromManualViewsLong();"
-                                                    class="w-full bg-transparent text-white font-black text-4xl text-center outline-none placeholder:text-gray-800 border-b border-white/5 focus:border-indigo-500/50 pb-2 transition-colors">
+                                                    class="w-full bg-transparent text-white font-black text-2xl md:text-4xl text-center outline-none placeholder:text-gray-800 border-b border-white/5 focus:border-indigo-500/50 pb-2 transition-colors">
                                             </div>
 
                                             <div class="flex flex-col items-center">
                                                 <div id="lMoneyFromManual"
-                                                    class="text-emerald-400 font-black text-5xl leading-none mb-2">
+                                                    class="text-emerald-400 font-black text-3xl md:text-5xl leading-none mb-2">
                                                     $0.00</div>
                                                 <div
                                                     class="text-[10px] text-gray-400 uppercase font-black opacity-40 tracking-widest">
@@ -1488,7 +1497,7 @@
 
                                         <!-- Modo B: Dinero -> Vistas -->
                                         <div
-                                            class="bg-black/40 p-6 rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all group flex flex-col items-center justify-center">
+                                            class="bg-black/40 p-4 md:p-6 rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all group flex flex-col items-center justify-center">
                                             <div
                                                 class="flex items-center justify-center gap-2 mb-4 text-[9px] text-gray-500 uppercase font-bold tracking-[0.2em]">
                                                 <span>Si mi meta de dinero es:</span>
@@ -1498,15 +1507,16 @@
 
                                             <div
                                                 class="flex items-center justify-center border-b border-white/5 focus-within:border-indigo-500/50 pb-2 mb-4 w-full max-w-xs transition-colors">
-                                                <span class="text-indigo-400 font-black text-4xl mr-2">$</span>
+                                                <span
+                                                    class="text-indigo-400 font-black text-2xl md:text-4xl mr-2">$</span>
                                                 <input type="text" id="lTargetIncome" value="500"
                                                     oninput="formatInputThousands(this); calcViewsFromTargetIncomeLong();"
-                                                    class="bg-transparent text-indigo-400 font-black text-4xl text-center outline-none placeholder:text-gray-800 w-40">
+                                                    class="bg-transparent text-indigo-400 font-black text-2xl md:text-4xl text-center outline-none placeholder:text-gray-800 w-32 md:w-40">
                                             </div>
 
                                             <div class="flex flex-col items-center">
                                                 <div id="lViewsFromIncome"
-                                                    class="text-white font-black text-5xl leading-none mb-2 tracking-tighter">
+                                                    class="text-white font-black text-3xl md:text-5xl leading-none mb-2 tracking-tighter">
                                                     0</div>
                                                 <div
                                                     class="text-[10px] text-gray-400 uppercase font-black opacity-40 tracking-widest">
@@ -2085,16 +2095,15 @@
             const shortsSec = document.getElementById('sectionShorts');
             const longSec = document.getElementById('sectionLong');
 
-            const activeClass = "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/25 transform scale-105";
+            const activeClass = "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/25";
             const inactiveClass = "text-gray-400 hover:text-white hover:bg-white/5";
 
-            // Ajuste de colores según tab
             const activeShorts = activeClass;
-            const activeLong = "bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg shadow-purple-500/25 transform scale-105";
+            const activeLong = "bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg shadow-purple-500/25";
 
             if (tab === 'shorts') {
-                shortsBtn.className = `px-8 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2 ${activeShorts}`;
-                longBtn.className = `px-8 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2 ${inactiveClass}`;
+                shortsBtn.className = `px-6 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base transition-all duration-300 flex items-center gap-2 ${activeShorts}`;
+                longBtn.className = `px-6 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base transition-all duration-300 flex items-center gap-2 ${inactiveClass}`;
 
                 shortsSec.classList.remove('hidden');
                 longSec.classList.add('hidden');
@@ -2103,8 +2112,8 @@
                 shortsSec.classList.remove('opacity-0', 'pointer-events-none');
                 shortsSec.classList.add('opacity-100');
             } else {
-                longBtn.className = `px-8 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2 ${activeLong}`;
-                shortsBtn.className = `px-8 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2 ${inactiveClass}`;
+                longBtn.className = `px-6 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base transition-all duration-300 flex items-center gap-2 ${activeLong}`;
+                shortsBtn.className = `px-6 md:px-12 py-3 md:py-5 rounded-full font-black text-xs md:text-base transition-all duration-300 flex items-center gap-2 ${inactiveClass}`;
 
                 longSec.classList.remove('hidden');
                 shortsSec.classList.add('hidden');
@@ -2403,12 +2412,13 @@
     </script>
 
     <!-- Sección de Hashtags por Nicho -->
-    <div class="glass-card rounded-2xl md:rounded-3xl p-5 md:p-12 mb-12 md:mb-20 mt-24 max-w-6xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-black mb-4 flex items-center justify-center gap-3 text-center">
+    <div
+        class="glass-card rounded-2xl md:rounded-3xl p-4 md:p-12 mb-12 md:mb-20 mt-24 max-w-6xl mx-auto w-[92%] md:w-full">
+        <h2 class="text-lg md:text-3xl font-black mb-4 flex items-center justify-center gap-3 text-center">
             <i class="fas fa-tags text-yellow-400"></i>
             Nichos Virales & Hashtags
         </h2>
-        <p class="text-gray-400 mb-8 text-center max-w-2xl mx-auto">
+        <p class="text-gray-400 mb-8 text-center max-w-2xl mx-auto text-sm md:text-base">
             Los nichos con más tráfico en Shorts. Copia y mezcla estos hashtags. <br>
             <span class="text-xs text-gray-500">(Recuerda siempre: #Shorts va primero)</span>
         </p>
@@ -2417,27 +2427,27 @@
 
             <!-- Comedia / Entretenimiento (El Rey de Shorts) -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-yellow-500/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-yellow-500/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-laugh-squint text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Comedia & Viral</h3>
+                <h3 class="text-sm font-bold text-white mb-4">Comedia & Viral</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Comedia</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Comedia</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Humor</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Humor</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Risa</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Risa</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Viral</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Viral</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Funny</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Funny</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Meme</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Meme</span>
                 </div>
             </div>
 
@@ -2448,22 +2458,22 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-gamepad text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Gaming</h3>
+                <h3 class="text-base font-bold text-white mb-4">Gaming</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gaming</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Gaming</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gamer</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Gamer</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Minecraft</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Minecraft</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Roblox</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Roblox</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Fortnite</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Fortnite</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#PlayStation</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#PlayStation</span>
                 </div>
             </div>
 
@@ -2474,22 +2484,22 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-brain text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Curiosidades</h3>
+                <h3 class="text-base font-bold text-white mb-4">Curiosidades</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Curiosidades</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Curiosidades</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#SabiasQue</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#SabiasQue</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Datos</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Datos</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Aprende</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Aprende</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Interesante</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Interesante</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Misterio</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Misterio</span>
                 </div>
             </div>
 
@@ -2500,22 +2510,22 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-camera text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Vlogs & Lifestyle</h3>
+                <h3 class="text-base font-bold text-white mb-4">Vlogs & Lifestyle</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Vlog</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Vlog</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Lifestyle</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Lifestyle</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#DailyRoutine</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#DailyRoutine</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Minivlog</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Minivlog</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Aesthetic</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Aesthetic</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#DayInMyLife</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#DayInMyLife</span>
                 </div>
             </div>
 
@@ -2526,22 +2536,22 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-dumbbell text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Fitness & Salud</h3>
+                <h3 class="text-base font-bold text-white mb-4">Fitness & Salud</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Fitness</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Fitness</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gym</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Gym</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Workout</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Workout</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Ejercicio</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Ejercicio</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Salud</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Salud</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Motivation</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Motivation</span>
                 </div>
             </div>
 
@@ -2552,22 +2562,22 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-book-open text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Storytime</h3>
+                <h3 class="text-base font-bold text-white mb-4">Storytime</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Storytime</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Storytime</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Historia</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Historia</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Chisme</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Chisme</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Drama</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Drama</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#RealLife</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#RealLife</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Confesiones</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Confesiones</span>
                 </div>
             </div>
 
@@ -2578,22 +2588,22 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-microchip text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Tecnología & Trucos</h3>
+                <h3 class="text-base font-bold text-white mb-4">Tecnología & Trucos</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Tech</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Tech</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Trucos</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Trucos</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Hacks</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Hacks</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Android</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Android</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#iPhone</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#iPhone</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gadgets</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Gadgets</span>
                 </div>
             </div>
 
@@ -2604,22 +2614,22 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-utensils text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Cocina & Recetas</h3>
+                <h3 class="text-base font-bold text-white mb-4">Cocina & Recetas</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Recetas</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Recetas</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Cocina</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Cocina</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Foodie</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Foodie</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Delicioso</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Delicioso</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Chef</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Chef</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Comida</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Comida</span>
                 </div>
             </div>
 
@@ -2630,36 +2640,36 @@
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-paw text-white"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Mascotas</h3>
+                <h3 class="text-base font-bold text-white mb-4">Mascotas</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
-                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-sm">#Shorts</span>
+                        class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Mascotas</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Mascotas</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Gatos</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Gatos</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Perros</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Perros</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Cute</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Cute</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#Animals</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#Animals</span>
                     <span
-                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full text-sm hover:text-white transition-colors">#FunnyAnimals</span>
+                        class="hashtag-badge bg-gray-800 text-gray-300 border border-gray-700 px-2 py-1 rounded-full text-[10px] md:text-xs hover:text-white transition-colors">#FunnyAnimals</span>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Sección de Comentarios -->
-    <div class="glass-card rounded-2xl md:rounded-3xl p-4 md:p-12 overflow-hidden w-full max-w-6xl mx-auto">
-        <h2 class="text-2xl md:text-3xl font-black mb-6 md:mb-8 flex items-center gap-3">
+    <div class="glass-card rounded-2xl md:rounded-3xl p-4 md:p-12 overflow-hidden max-w-6xl mx-auto w-[92%] md:w-full">
+        <h2 class="text-base md:text-3xl font-black mb-6 md:mb-8 flex items-center gap-3">
             <i class="fas fa-comments text-emerald-400"></i>
             Comentarios
         </h2>
 
         <!-- Formulario de comentarios -->
-        <form id="commentForm" class="mb-8 md:mb-12 bg-black/30 rounded-2xl p-4 md:p-6">
+        <form id="commentForm" class="mb-8 md:mb-12 bg-black/30 rounded-2xl p-3 md:p-6">
             <div class="mb-4">
                 <label class="flex items-center gap-2 mb-2 cursor-pointer select-none">
                     <input type="checkbox" id="anonymousCheck"
@@ -2710,6 +2720,32 @@
     <div class="hidden">
         <div class="bg-pink-500/20 border-pink-500 bg-pink-500 border-pink-500/30 text-pink-500"></div>
         <div class="bg-purple-500/20 border-purple-500 bg-purple-500 border-purple-500/30 text-purple-500"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-[9999] flex flex-col gap-3 pointer-events-none"></div>
+
+    <!-- Confirm Modal Backdrop (Hidden by default) -->
+    <div id="confirm-modal"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[10000] hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="bg-[#1e293b] border border-gray-700 p-6 rounded-2xl max-w-sm w-[90%] mx-auto shadow-2xl transform scale-95 transition-transform duration-300"
+            id="confirm-content">
+            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <i class="fas fa-exclamation-triangle text-yellow-500"></i>
+                Confirmar Acción
+            </h3>
+            <p id="confirm-message" class="text-gray-300 mb-6 leading-relaxed">¿Estás seguro?</p>
+            <div class="flex gap-3 justify-end">
+                <button id="confirm-cancel"
+                    class="px-4 py-2 rounded-xl bg-gray-700 text-gray-300 hover:bg-gray-600 font-medium transition-colors">
+                    Cancelar
+                </button>
+                <button id="confirm-yes"
+                    class="px-4 py-2 rounded-xl bg-red-500 text-white hover:bg-red-600 font-bold shadow-lg shadow-red-500/20 transition-all">
+                    Sí, eliminar
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- Script para los Checklists Premium -->
