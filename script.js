@@ -1,3 +1,20 @@
+// ===== FIREBASE CONFIGURATION =====
+const firebaseConfig = {
+    apiKey: "AIzaSyD3cBHEnxnsgecIi_jPiRd5DBWyPwrHJk8",
+    authDomain: "guia-monetizacion.firebaseapp.com",
+    projectId: "guia-monetizacion",
+    storageBucket: "guia-monetizacion.firebasestorage.app",
+    messagingSenderId: "403297345438",
+    appId: "1:403297345438:web:8d5181445a817464b5c08f",
+    databaseURL: "https://guia-monetizacion-default-rtdb.firebaseio.com/"
+};
+
+// Initialize Firebase
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
+const db = firebase.database();
+
 // ===== BROWSER FINGERPRINTING =====
 async function getBrowserFingerprint() {
     try {
@@ -174,51 +191,81 @@ let currentRating = 0;
 let browserFingerprint = null;
 let editingCommentId = null;
 
-// Cargar datos del localStorage al iniciar
+// Cargar datos al iniciar
 async function loadData() {
     browserFingerprint = await getBrowserFingerprint();
 
-    const savedComments = localStorage.getItem('ytComments');
-    const savedLikes = localStorage.getItem('ytLikes');
-    const savedDislikes = localStorage.getItem('ytDislikes');
-    const savedVote = localStorage.getItem('userVote');
+    // Referencias a la base de datos
+    const statsRef = db.ref('stats');
+    const commentsRef = db.ref('comments');
+
+    // Cargar Votos del usuario (Local)
+    userVote = localStorage.getItem('userVote');
     const savedFingerprint = localStorage.getItem('userFingerprint');
-
-    // Forzar el comentario del administrador y limpiar el resto (reseteo solicitado)
-    const adminComment = {
-        id: 1000,
-        fingerprint: 'admin-donaxi',
-        name: 'Donaxi',
-        text: 'Espero y este contenido les guste y les pueda ayudar. ❤️🫶',
-        rating: 5,
-        date: new Date().toLocaleDateString('es-ES'),
-        isAnonymous: false,
-        likes: 0,
-        likedBy: [],
-        edited: false,
-        isAdmin: true
-    };
-
-    comments = [adminComment];
-    localStorage.setItem('ytComments', JSON.stringify(comments));
-    if (savedLikes !== null) {
-        likes = parseInt(savedLikes);
-    } else {
-        likes = 20; // Garantizar 20 por defecto
-        localStorage.setItem('ytLikes', likes.toString());
-    }
-    if (savedDislikes) dislikes = parseInt(savedDislikes);
-
-    if (savedVote && savedFingerprint === browserFingerprint) {
-        userVote = savedVote;
-    } else if (savedVote && savedFingerprint !== browserFingerprint) {
-        localStorage.removeItem('userVote');
-        localStorage.removeItem('userFingerprint');
+    if (savedFingerprint !== browserFingerprint) {
         userVote = null;
+        localStorage.removeItem('userVote');
     }
 
-    updateUI();
-    renderComments();
+    // Escuchar Likes/Dislikes Globales
+    statsRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+            likes = data.likes || 0;
+            dislikes = data.dislikes || 0;
+            updateUI();
+        } else {
+            // Inicializar si no existe
+            statsRef.set({ likes: 20, dislikes: 0 });
+        }
+    });
+
+    // Escuchar Comentarios Globales
+    commentsRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+            // Convertir objeto a array
+            comments = Object.keys(data).map(key => ({
+                id: key,
+                ...data[key]
+            }));
+
+            // Si no hay el comentario del administrador o se borró, asegurarlo (opcional según necesidad)
+            const hasAdmin = comments.some(c => c.isAdmin === true);
+            if (!hasAdmin) {
+                const adminComment = {
+                    fingerprint: 'admin-donaxi',
+                    name: 'Donaxi',
+                    text: 'Espero y este contenido les guste y les pueda ayudar. ❤️🫶',
+                    rating: 5,
+                    date: new Date().toLocaleDateString('es-ES'),
+                    isAnonymous: false,
+                    likes: 0,
+                    likedBy: [],
+                    edited: false,
+                    isAdmin: true
+                };
+                commentsRef.push(adminComment);
+            }
+        } else {
+            // Primer comentario del administrador si la BD está vacía
+            const adminComment = {
+                fingerprint: 'admin-donaxi',
+                name: 'Donaxi',
+                text: 'Espero y este contenido les guste y les pueda ayudar. ❤️🫶',
+                rating: 5,
+                date: new Date().toLocaleDateString('es-ES'),
+                isAnonymous: false,
+                likes: 0,
+                likedBy: [],
+                edited: false,
+                isAdmin: true
+            };
+            commentsRef.push(adminComment);
+        }
+        renderComments();
+        checkUserAlreadyCommented();
+    });
 }
 
 // Actualizar UI de likes/dislikes
@@ -241,11 +288,11 @@ function updateUI() {
 
 // Manejar like
 function handleLike() {
+    const statsRef = db.ref('stats');
     if (userVote === 'like') {
         likes--;
         userVote = null;
         localStorage.removeItem('userVote');
-        localStorage.removeItem('userFingerprint');
     } else {
         if (userVote === 'dislike') dislikes--;
         likes++;
@@ -253,19 +300,16 @@ function handleLike() {
         localStorage.setItem('userVote', 'like');
         localStorage.setItem('userFingerprint', browserFingerprint);
     }
-
-    localStorage.setItem('ytLikes', likes.toString());
-    localStorage.setItem('ytDislikes', dislikes.toString());
-    updateUI();
+    statsRef.update({ likes, dislikes });
 }
 
 // Manejar dislike
 function handleDislike() {
+    const statsRef = db.ref('stats');
     if (userVote === 'dislike') {
         dislikes--;
         userVote = null;
         localStorage.removeItem('userVote');
-        localStorage.removeItem('userFingerprint');
     } else {
         if (userVote === 'like') likes--;
         dislikes++;
@@ -273,10 +317,7 @@ function handleDislike() {
         localStorage.setItem('userVote', 'dislike');
         localStorage.setItem('userFingerprint', browserFingerprint);
     }
-
-    localStorage.setItem('ytLikes', likes.toString());
-    localStorage.setItem('ytDislikes', dislikes.toString());
-    updateUI();
+    statsRef.update({ likes, dislikes });
 }
 
 // Manejar compartir
@@ -403,16 +444,15 @@ function handleCommentSubmit(e) {
 
     // Verificar si está editando
     if (editingCommentId) {
-        // Editar comentario existente
-        const commentIndex = comments.findIndex(c => c.id === editingCommentId);
-        if (commentIndex !== -1) {
-            comments[commentIndex].text = commentText;
-            comments[commentIndex].rating = currentRating;
-            comments[commentIndex].name = finalName;
-            comments[commentIndex].isAnonymous = isAnonymous;
-            comments[commentIndex].edited = true;
-            comments[commentIndex].editDate = new Date().toLocaleDateString('es-ES');
-        }
+        // Editar comentario existente en Firebase
+        db.ref('comments/' + editingCommentId).update({
+            text: commentText,
+            rating: currentRating,
+            name: finalName,
+            isAnonymous: isAnonymous,
+            edited: true,
+            editDate: new Date().toLocaleDateString('es-ES')
+        });
         editingCommentId = null;
         document.querySelector('#commentForm button[type="submit"]').innerHTML = '<i class="fas fa-paper-plane"></i> Publicar Comentario';
     } else {
@@ -422,9 +462,8 @@ function handleCommentSubmit(e) {
             return;
         }
 
-        // Crear nuevo comentario
-        const comment = {
-            id: Date.now(),
+        // Crear nuevo comentario en Firebase
+        const newComment = {
             fingerprint: browserFingerprint,
             name: finalName,
             text: commentText,
@@ -437,11 +476,9 @@ function handleCommentSubmit(e) {
             isAdmin: !isAnonymous && name.toLowerCase() === 'donaxi'
         };
 
-        comments.unshift(comment);
+        db.ref('comments').push(newComment);
         showToast('¡Comentario publicado con éxito!', 'success');
     }
-
-    localStorage.setItem('ytComments', JSON.stringify(comments));
 
     // Resetear formulario
     document.getElementById('commentForm').reset();
@@ -493,40 +530,38 @@ function likeComment(commentId) {
     if (!comment.likedBy) comment.likedBy = [];
 
     const hasLiked = comment.likedBy.includes(browserFingerprint);
+    let newLikes = comment.likes || 0;
+    let newLikedBy = [...comment.likedBy];
 
     if (hasLiked) {
-        // Quitar like
-        comment.likes--;
-        comment.likedBy = comment.likedBy.filter(fp => fp !== browserFingerprint);
+        newLikes--;
+        newLikedBy = newLikedBy.filter(fp => fp !== browserFingerprint);
     } else {
-        // Dar like
-        comment.likes++;
-        comment.likedBy.push(browserFingerprint);
+        newLikes++;
+        newLikedBy.push(browserFingerprint);
     }
 
-    localStorage.setItem('ytComments', JSON.stringify(comments));
-    renderComments();
+    db.ref('comments/' + commentId).update({
+        likes: newLikes,
+        likedBy: newLikedBy
+    });
 }
 
-// Eliminar comentario (Nuevo)
+// Eliminar comentario
 async function deleteComment(commentId) {
     const confirmed = await showConfirm('¿Estás seguro de eliminar este comentario?');
     if (!confirmed) return;
 
-    const commentIndex = comments.findIndex(c => c.id === commentId);
-    if (commentIndex === -1) return;
+    const comment = comments.find(c => c.id === commentId);
+    if (!comment) return;
 
     // Seguridad extra
-    if (comments[commentIndex].fingerprint !== browserFingerprint) {
+    if (comment.fingerprint !== browserFingerprint) {
         showToast('Solo puedes eliminar tus propios comentarios.', 'error');
         return;
     }
 
-    // Eliminar del array
-    comments.splice(commentIndex, 1);
-
-    // Guardar en LS
-    localStorage.setItem('ytComments', JSON.stringify(comments));
+    db.ref('comments/' + commentId).remove();
 
     // Resetear UI
     cancelEdit();
@@ -536,8 +571,6 @@ async function deleteComment(commentId) {
     if (banner) banner.remove();
 
     showToast('Comentario eliminado correctamente', 'success');
-
-    renderComments();
 }
 
 // Calcular score del comentario (rating + likes)
@@ -651,12 +684,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('commentForm').addEventListener('submit', handleCommentSubmit);
 
     // Verificar si ya comentó y mostrar mensaje
-    if (hasUserCommented()) {
-        const userComment = getUserComment();
-        const formTitle = document.createElement('div');
-        formTitle.id = 'alreadyCommentedBanner'; // ID para poder eliminarlo después
-        formTitle.className = 'mb-4 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-sm text-emerald-400 flex items-center gap-2 animate-fade-in';
-        formTitle.innerHTML = '<i class="fas fa-info-circle"></i> <span>Ya has comentado. Puedes editar o eliminar tu comentario.</span>';
-        document.getElementById('commentForm').insertBefore(formTitle, document.getElementById('commentForm').firstChild);
-    }
+    checkUserAlreadyCommented();
 });
+
+// Función auxiliar para verificar si ya comentó (usada en varios sitios)
+function checkUserAlreadyCommented() {
+    const banner = document.getElementById('alreadyCommentedBanner');
+    if (hasUserCommented()) {
+        if (!banner) {
+            const formTitle = document.createElement('div');
+            formTitle.id = 'alreadyCommentedBanner';
+            formTitle.className = 'mb-4 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-sm text-emerald-400 flex items-center gap-2 animate-fade-in';
+            formTitle.innerHTML = '<i class="fas fa-info-circle"></i> <span>Ya has comentado. Puedes editar o eliminar tu comentario.</span>';
+            document.getElementById('commentForm').insertBefore(formTitle, document.getElementById('commentForm').firstChild);
+        }
+    } else {
+        if (banner) banner.remove();
+    }
+}
