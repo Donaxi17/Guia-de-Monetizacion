@@ -109,13 +109,13 @@ function updateUI() {
     const likeBtn = document.getElementById('likeBtn');
     const dislikeBtn = document.getElementById('dislikeBtn');
 
-    likeBtn.className = 'social-btn flex items-center gap-2 px-6 py-3 rounded-full font-semibold glass-card text-gray-300';
-    dislikeBtn.className = 'social-btn flex items-center gap-2 px-6 py-3 rounded-full font-semibold glass-card text-gray-300';
+    likeBtn.className = 'social-btn flex-1 sm:flex-none justify-center min-w-0 flex items-center gap-2 px-3 py-3 md:px-6 rounded-full font-semibold glass-card text-gray-300 active:scale-95 text-xs';
+    dislikeBtn.className = 'social-btn flex-1 sm:flex-none justify-center min-w-0 flex items-center gap-2 px-3 py-3 md:px-6 rounded-full font-semibold glass-card text-gray-300 active:scale-95 text-xs';
 
     if (userVote === 'like') {
-        likeBtn.className = 'social-btn flex items-center gap-2 px-6 py-3 rounded-full font-semibold bg-emerald-500 text-white';
+        likeBtn.className = 'social-btn flex-1 sm:flex-none justify-center min-w-0 flex items-center gap-2 px-3 py-3 md:px-6 rounded-full font-semibold bg-emerald-500 text-white active:scale-95 text-xs';
     } else if (userVote === 'dislike') {
-        dislikeBtn.className = 'social-btn flex items-center gap-2 px-6 py-3 rounded-full font-semibold bg-red-500 text-white';
+        dislikeBtn.className = 'social-btn flex-1 sm:flex-none justify-center min-w-0 flex items-center gap-2 px-3 py-3 md:px-6 rounded-full font-semibold bg-red-500 text-white active:scale-95 text-xs';
     }
 }
 
