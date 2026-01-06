@@ -54,7 +54,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- Recursos CSS con optimización -->
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -68,14 +68,12 @@
 
         body {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
             min-height: 100vh;
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
+            margin: 0;
         }
 
-        body.loaded {
-            opacity: 1;
-        }
+
 
         /* ===== EFECTOS DE TEXTO ===== */
         .gradient-text {
@@ -248,6 +246,13 @@
             padding-right: 6%;
             max-width: 100%;
             overflow-x: hidden;
+        }
+
+        @media (max-width: 480px) {
+            .page-container {
+                padding-left: 8% !important;
+                padding-right: 8% !important;
+            }
         }
 
         @media (min-width: 640px) {
@@ -431,7 +436,8 @@
 
                     <!-- Guía Shorts -->
                     <div class="mb-12">
-                        <div class="glass-card rounded-3xl p-5 md:p-12 border-l-4 border-pink-500 mb-8 overflow-hidden">
+                        <div
+                            class="glass-card rounded-3xl p-4 md:p-12 border-l-4 border-pink-500 mb-8 overflow-hidden w-[94%] mx-auto md:w-full">
                             <div class="flex flex-col md:flex-row gap-8 items-center">
                                 <div class="w-full md:w-2/3 text-center md:text-left">
                                     <h2 class="text-2xl md:text-5xl font-black text-white mb-4 break-words">Dominando
@@ -605,7 +611,7 @@
 
                     <!-- Calculadora Shorts (Premium Dark) -->
                     <div
-                        class="bg-[#111] rounded-3xl p-5 md:p-12 border border-gray-800 shadow-2xl relative overflow-hidden">
+                        class="bg-[#111] rounded-3xl p-4 md:p-12 border border-gray-800 shadow-2xl relative overflow-hidden w-[94%] mx-auto md:w-full">
                         <!-- Glow -->
                         <div
                             class="absolute -top-40 -left-20 w-80 h-80 bg-pink-600/10 blur-[100px] rounded-full pointer-events-none">
@@ -979,7 +985,7 @@
                     <!-- Guía Largos -->
                     <div class="mb-12">
                         <div
-                            class="glass-card rounded-3xl p-5 md:p-12 border-l-4 border-purple-500 mb-8 overflow-hidden">
+                            class="glass-card rounded-3xl p-4 md:p-12 border-l-4 border-purple-500 mb-8 overflow-hidden w-[94%] mx-auto md:w-full">
                             <div class="flex flex-col md:flex-row gap-8 items-center">
                                 <div class="w-full md:w-2/3 text-center md:text-left">
                                     <h2 class="text-2xl md:text-5xl font-black text-white mb-4 break-words px-1">Videos
@@ -1134,7 +1140,7 @@
 
                     <!-- Calculadora Largos -->
                     <div
-                        class="bg-[#111] rounded-3xl p-5 md:p-12 border border-gray-800 shadow-2xl relative overflow-hidden">
+                        class="bg-[#111] rounded-3xl p-4 md:p-12 border border-gray-800 shadow-2xl relative overflow-hidden w-[94%] mx-auto md:w-full">
                         <!-- Glow -->
                         <div
                             class="absolute -top-40 -left-20 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full pointer-events-none">
@@ -2453,12 +2459,12 @@
 
             <!-- Gaming -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-purple-500/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-purple-500/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-gamepad text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Gaming</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Gaming</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2479,12 +2485,12 @@
 
             <!-- Curiosidades / Datos -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-red-500/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-red-500/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-brain text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Curiosidades</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Curiosidades</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2505,12 +2511,12 @@
 
             <!-- Lifestyle / Vlogs -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-blue-400/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-blue-400/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-camera text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Vlogs & Lifestyle</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Vlogs & Lifestyle</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2531,12 +2537,12 @@
 
             <!-- Fitness / Salud -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-emerald-500/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-emerald-500/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-dumbbell text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Fitness & Salud</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Fitness & Salud</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2557,12 +2563,12 @@
 
             <!-- Storytime / Historias -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-pink-500/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-pink-500/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-book-open text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Storytime</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Storytime</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2583,12 +2589,12 @@
 
             <!-- Tecnología & Trucos -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-cyan-500/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-cyan-500/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-microchip text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Tecnología & Trucos</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Tecnología & Trucos</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2609,12 +2615,12 @@
 
             <!-- Cocina & Recetas -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-orange-500/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-orange-500/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-utensils text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Cocina & Recetas</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Cocina & Recetas</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2635,12 +2641,12 @@
 
             <!-- Mascotas (El Clásico) -->
             <div
-                class="niche-card rounded-2xl p-6 bg-black/40 border border-gray-800 hover:border-yellow-400/50 transition-colors group text-center">
+                class="niche-card rounded-2xl p-4 bg-black/40 border border-gray-800 hover:border-yellow-400/50 transition-colors group text-center">
                 <div
                     class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform mx-auto">
                     <i class="fas fa-paw text-white"></i>
                 </div>
-                <h3 class="text-base font-bold text-white mb-4">Mascotas</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white mb-4">Mascotas</h3>
                 <div class="flex flex-wrap gap-2 justify-center">
                     <span
                         class="hashtag-badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full text-[10px] md:text-xs">#Shorts</span>
@@ -2818,9 +2824,9 @@
                 Donaxi
             </a>
         </p>
-        <p class="text-sm text-gray-600">© 2026 - Todos los derechos reservados</p>
+        <p class="text-sm text-gray-600 pb-4">© 2026 - Todos los derechos reservados</p>
     </div>
-    </div>
+    </main>
     </div>
 
     <script src="script.js"></script>
